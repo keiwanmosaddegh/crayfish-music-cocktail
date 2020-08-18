@@ -1,0 +1,19 @@
+html
+  head
+    title Sorry, we are missing the ingredients right now... 🍸
+    link(rel='stylesheet' href='https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css')
+    link(rel='stylesheet' href="/missingIngredients.css")
+  body
+    div.center
+      h1="Sorry, we are missing the ingredients right now... 🍸"
+      img(src="https://media.giphy.com/media/igsvLnrCpT6NQftbBd/giphy.gif" alt="Cocktail Gif" width="400")
+      h2.segmentspacing="Also, check that you have a cocktail glass in your hand that you recently have used ♫"
+      
+      ul(class='footer')
+          li
+            a(href='/bartender') I want to mix another cocktail!
+    
+      block footer
+        ul(class='footer')
+          li
+            a(href='/logout') Log out

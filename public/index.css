@@ -1,0 +1,24 @@
+a {
+  background-color: #f8a5c2;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.center {
+  margin: auto;
+  width: 100%;
+  border: 8px solid #f8a5c2;
+  padding: 10px;
+  text-align: center;
+  min-height: 100%;
+  background-color: #f5cd79;
+  padding-top: 20%;
+}

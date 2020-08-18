@@ -1,0 +1,48 @@
+html
+  head
+    title Your bartender is serving you 🍸
+    link(rel='stylesheet' href='https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css')
+    link(rel="stylesheet" href="/cocktailMaker.css")
+
+  body
+    div.center
+
+      h1 Good. The rules are simple.
+      h2 You pick your ingredients. You mix some. You enjoy some. ♫
+
+      h1.ghosty LET'S GET STARTED, SHALL WE?
+      h2 Pick your liquour of Genres.
+      h4 Don't mix more than 5. It should taste good, after all.
+        form(action='/cocktail' method="post")
+          label(for='selectedGenres')
+          select(name='selectedGenres' id='selectedGenres' multiple required)
+              each genre in genres
+                  option(value=genre) #{genre}
+          br
+          label(for='partyMode') How many centiliters of Party?
+          h4 0 === no party
+          input(type="range" id="partyMode" name="partyMode" min="0" max="6" step="2")
+
+          label(for='tempo') Time to pick the Tempo. Choose wisely.
+          input(type="range" id="tempo" name="tempo" min="0" max="5")
+
+          label(for='isHipster') Are you up for some Hipster?
+          br
+          input(type="checkbox" name='isHipster' id='isHipster')
+          br
+          label(for='isTophits') Maybe safe it a little with some Top Hits?
+          br
+          input(type="checkbox" name='isTophits' id='isTophits')
+          br
+          label(for='isAcoustic') Should we mix in some of that Acoustic shit?
+          br
+          input(type="checkbox" name='isAcoustic' id='isAcoustic')
+          br
+          label(for='isVocals') And finally - Vocals, or no Vocals?
+          br
+          input(type="checkbox" name='isVocals' id='isVocals')
+          br
+          
+
+          input(type='submit', value='Mix Cocktail')
+

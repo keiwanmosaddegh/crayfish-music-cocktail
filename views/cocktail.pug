@@ -1,0 +1,34 @@
+html
+  head
+    title Your Cocktail 🍸
+    link(rel='stylesheet' href='https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css')
+    link(rel='stylesheet' href="/cocktail.css")
+  body
+    div.center
+      h1="Great, your cocktail is ready. Shaken, not stirred."
+      img(src="https://media.giphy.com/media/l3fQaE2lbSAPUnB04/giphy.gif" alt="Cocktail Gif" width="400")
+      h2.segmentspacing="Pshht, here are the secret ingredients... ♫"
+        if !Array.isArray(genres)
+          p=genres
+        else 
+          each genre in genres
+            p=genre
+        p #{partyMode} cl of party
+        if isHipster
+          p with a taste of hipster
+        if isTophits
+          p using mainstream liquor
+        if isAcoustic
+          p maybe some unplugged spices
+        if isVocals
+          p toppped with some sweet singing
+        if tempo
+          h2 your total p(r)ace is #{tempos[tempo]}
+      h2="Tracks from your tailored cocktail: "
+      ul
+        each track in tracks
+          li=track.name
+      block footer
+        ul(class='footer')
+          li
+            a(href='/logout') Log out
