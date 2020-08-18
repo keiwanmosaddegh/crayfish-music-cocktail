@@ -1,0 +1,11 @@
+body {
+  padding: 1em 2em;
+}
+ul.footer {
+  list-style:none;
+  display:inline;
+}
+ul.footer li {
+  display:inline;
+  margin-right: 1em;
+}
